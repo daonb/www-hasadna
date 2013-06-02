@@ -2,23 +2,23 @@
 
 /* Controllers */
 
-function PhoneListCtrl($scope, Phone) {
-  $scope.phones = Phone.query();
+function homeCtrl($scope, $http) {
+  $http.get('quotes.json', succss=function(data) {
+           $scope.quotes = data;
+           });
+}
+
+function ProjectListCtrl($scope, Project) {
+  $scope.projects = Project.query();
   $scope.orderProp = 'born';
 }
 
-//PhoneListCtrl.$inject = ['$scope', 'Phone'];
-
-
-
-function PhoneDetailCtrl($scope, $routeParams, Phone) {
-  $scope.phone = Phone.get({phoneId: $routeParams.phoneId}, function(phone) {
-    $scope.mainImageUrl = phone.images[0];
+function ProjectDetailCtrl($scope, $routeParams, Project) {
+  $scope.project = Project.get({projectId: $routeParams.projectId}, function(project) {
+    $scope.mainImageUrl = project.images[0];
   });
 
   $scope.setImage = function(imageUrl) {
     $scope.mainImageUrl = imageUrl;
   }
 }
-
-//PhoneDetailCtrl.$inject = ['$scope', '$routeParams', 'Phone'];

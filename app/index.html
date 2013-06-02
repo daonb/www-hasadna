@@ -1,18 +1,42 @@
 <!doctype html>
-<html lang="en" ng-app="phonecat">
+<html lang="he" dir="rtl" class="rtl" ng-app="hasadna">
 <head>
   <meta charset="utf-8">
-  <title>Google Phone Gallery</title>
+  <title>הסדנא לידא ציבורי - {{page.name}}</title>
+  <link rel="stylesheet" type="text/css" href="http://oknesset.org/static/css/A.app.css,,qv==26+responsive.css,Mcc.WGfR0Zf8Jt.css.pagespeed.cf.bvIYZGldSb.css"/>
   <link rel="stylesheet" href="css/app.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <script src="lib/angular/angular.js"></script>
+  <script type="text/javascript">
+    var NREUMQ=NREUMQ||[];
+    NREUMQ.push(["mark","firstbyte",new Date().getTime()]);
+  </script> 
+  <script src="lib/angular/angular.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/controllers.js"></script>
   <script src="js/filters.js"></script>
   <script src="js/services.js"></script>
-  <script src="lib/angular/angular-resource.js"></script>
+  <script src="lib/angular/angular-resource.min.js"></script>
+    
+  <!-- TODO: remove jquery... -->
+  <script pagespeed_orig_src="js/jquery-1.8.3.min.js" type="text/psajs" orig_index="4"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
+    <header id="app-header" class="container">
+
+      <div class="row">
+        <div id="logo" class="span2">
+          <a href="/">
+            <img src="http://wiki.hasadna.org.il/images/SadnaLogo150x.png" alt="hasadna-logo"/>
+          </a>
+        </div>
+        <ul class="nav nav-pills">
+            <li id="nav-who"><a href="about">מי אנחנו?</a></li>
+            <li id="nav-who"><a href="who">איך פועלים?</a></li>
+            <li id="nav-what"> <a href="projects">מה עושים?</a> </li>
+            <li id="nav-why"> <a href="why">למה לי?</a> </li>
+        </ul>
+      </div>
+    </header>
 
   <div ng-view></div>
 
