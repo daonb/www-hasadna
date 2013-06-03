@@ -1,0 +1,11 @@
+<div class="row">
+  <div id="tidbitCarousel" class="carousel slide card card-main" style="margin-top:20px">
+    <carousel interval="myInterval">
+      <slide ng-repeat="quote in quotes" active="quote.active">
+          <img class="tidbit-pic" src="{{quote.imageURL}}" alt="Quote photo" width="200" height="270">
+          <div><p>{{quote.source}}</p></div>
+          <strong class="tidbit-icon-quote">{{quote.author}}</strong>
+      </slide>
+    </carousel>
+  </div>
+</div>

@@ -1,6 +1,8 @@
 /* app css stylesheet */
 
 #logo { height:150px; }
-#add-header .row {position:relative;}
-#app-header .nav-pills ul {height:150px; position:absolute; bottom: 0;}
+#app-header .row {position:relative;}
+#app-header .nav-pills {position:absolute; bottom: 0; width: 100%; right:20%;}
 #app-header .nav-pills li {width:20%; }
+div#tidbitCarousel .carousel-control {display:inline;}
+.carousel-indicators { right:auto; left:20px; bottom:10px;}

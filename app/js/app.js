@@ -2,7 +2,7 @@
 
 /* App Module */
 
-angular.module('hasadna', ['hasadnaServices']).
+angular.module('hasadna', ['ui.bootstrap', 'hasadnaServices']).
   config(['$routeProvider', function($routeProvider) {
   $routeProvider.
       when('/', {templateUrl: 'partials/home.html',   controller: homeCtrl}).

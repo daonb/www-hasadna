@@ -3,7 +3,8 @@
 /* Controllers */
 
 function homeCtrl($scope, $http) {
-  $http.get('quotes.json', succss=function(data) {
+  $scope.myInterval = 4000;
+  $http.get('quotes.json').success(function(data) {
            $scope.quotes = data;
            });
 }
